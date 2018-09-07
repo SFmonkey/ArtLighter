@@ -4,6 +4,10 @@
     "description": "art template highlight",
     "version": "0.0.1",
     "publisher": "ZihanLi",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SFmonkey/ArtLighter"
+    },
     "engines": {
         "vscode": "^1.0.0"
     },
