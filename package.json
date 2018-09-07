@@ -1,9 +1,10 @@
 {
     "name": "at-helper",
-    "displayName": "art template helper",
+    "displayName": "Art Template Helper",
     "description": "Art template support for Visual Studio Code",
     "version": "0.0.1",
     "publisher": "ZihanLi",
+    "icon": "icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/SFmonkey/ArtLighter"
