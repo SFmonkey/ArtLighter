@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "artTemplate",
+	"patterns": [
+    {
+      "include": "#bracket"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "text.html.basic"
+    }
+	],
+	"repository": {
+    "bracket": {
+      "name": "markup.heading",
+      "begin": "{{",
+      "end": "}}",
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "\\b(each|if|else|set|block|extend|include)\\b"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "\\s(>|<|>=|<=|[=]{1,3})\\s"
+        },
+        {
+          "name": "support.class",
+          "match": "\\s(\\?|\\|\\||\\||\\+|:|@|&&)\\s"
+        },
+        {
+          "name": "variable.name",
+          "match": "\\$?[a-zA-Z0-9_\\.]+"
+        },
+        {
+          "name": "string.quoted.double",
+          "begin": "'",
+          "end": "'"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "\\[|\\]"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash",
+          "match": "\/\/[^\n]*"
+        } 
+      ]
+    }
+	},
+	"scopeName": "text.html.art"
+}

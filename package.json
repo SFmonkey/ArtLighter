@@ -1,0 +1,26 @@
+{
+    "name": "art",
+    "displayName": "",
+    "description": "art template highlight",
+    "version": "0.0.1",
+    "publisher": "ZihanLi",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "arttemplate",
+            "aliases": ["art"],
+            "extensions": [".art"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "arttemplate",
+            "scopeName": "text.html.art",
+            "path": "./syntaxes/art_HTML.tmLanguage.json"
+        }]
+    }
+}
