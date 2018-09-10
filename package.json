@@ -2,7 +2,7 @@
     "name": "at-helper",
     "displayName": "Art Template Helper",
     "description": "Art template support for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publisher": "ZihanLi",
     "icon": "icon.png",
     "repository": {

@@ -1,1 +1,3 @@
-art template highlight
+Art template highlight
+
+Enjoy!
