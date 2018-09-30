@@ -3,13 +3,20 @@
 	"name": "artTemplate",
 	"patterns": [
     {
+      "include": "#htmlbracket"
+    },
+    {
+      "include": "text.html.basic"
+    },
+    {
+      "match": "</[a-zA-Z]+>",
+      "name": "constant.language"
+    },
+    {
       "include": "#bracket"
     },
     {
       "include": "#comments"
-    },
-    {
-      "include": "text.html.basic"
     }
 	],
 	"repository": {
@@ -18,6 +25,95 @@
       "begin": "{{",
       "end": "}}",
       "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "\\b(each|if|else|set|block|extend|include)\\b"
+        },
+        {
+          "name": "keyword.control",
+          "match": "/(if|each|block)"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "\\s(>|<|>=|<=|[=]{1,3})\\s"
+        },
+        {
+          "name": "support.class",
+          "match": "\\s(\\?|\\|\\||\\||\\+|:|@|&&)\\s"
+        },
+        {
+          "name": "variable.name",
+          "match": "\\$?[a-zA-Z0-9_\\.]+"
+        },
+        {
+          "name": "string.quoted.double",
+          "begin": "'",
+          "end": "'"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "\\[|\\]"
+        }
+      ]
+    },
+    "htmlbracket": {
+      "begin": "</?[a-zA-Z]+",
+      "end": "\\s?>",
+      "beginCaptures": {
+        "0" : {
+          "name": "constant.language"
+        }
+      },
+      "endCaptures": {
+        "0" : {
+          "name": "constant.language"
+        }
+      },
+      "patterns": [
+        {
+          "name": "string",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "keyword.control",
+              "match": "\\b(each|if|else|set|block|extend|include)\\b"
+            },
+            {
+              "name": "keyword.control",
+              "match": "/(if|each|block)"
+            },
+            {
+              "name": "markup.heading",
+              "match": "{{|}}"
+            },
+            {
+              "name": "keyword.operator",
+              "match": "\\s(>|<|>=|<=|[=]{1,3})\\s"
+            },
+            {
+              "name": "support.class",
+              "match": "\\s(\\?|\\|\\||\\||\\+|:|@|&&)\\s"
+            },
+            {
+              "name": "variable.name",
+              "match": "\\$[a-zA-Z0-9_\\.]+"
+            },
+            {
+              "name": "string.quoted.double",
+              "begin": "'",
+              "end": "'"
+            },
+            {
+              "name": "keyword.operator",
+              "match": "\\[|\\]"
+            }  
+          ]
+        },
+        {
+          "name": "markup.heading",
+          "match": "{{|}}"
+        },
         {
           "name": "keyword.control",
           "match": "\\b(each|if|else|set|block|extend|include)\\b"
